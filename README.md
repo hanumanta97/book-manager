@@ -129,7 +129,6 @@ book_manager/
 ## Running Tests (Bonus)
 
 ```bash
-pytest  # if you add pytest, or:
 python manage.py test
 ```
 
