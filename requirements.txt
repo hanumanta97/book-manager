@@ -1,0 +1,6 @@
+Django==4.2.13
+djangorestframework==3.14.0
+psycopg2-binary
+django-filter==24.2
+gunicorn==21.2.0
+whitenoise
