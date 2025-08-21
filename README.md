@@ -6,7 +6,7 @@ A clean, containerized Django REST API for managing Books. Uses **PostgreSQL**, 
 
 ```bash
 # 1) Clone the repo
-git clone <your-fork-or-repo-url>.git
+git clone https://github.com/hanumanta97/book-manager.git
 cd book_manager
 
 # 2) (Optional) copy env
