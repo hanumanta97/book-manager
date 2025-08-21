@@ -14,6 +14,16 @@ cp .env.sample .env
 
 # 3) Build & run
 docker-compose up --build
+
+# 4) Access the running container
+docker-compose exec web bash
+
+# Inside the container, run:
+python manage.py createsuperuser
+# Follow prompts for username, email, and password
+
+# http://127.0.0.1:8000/admin
+
 # API will be available at http://localhost:8000/api/books/
 ```
 
@@ -41,6 +51,9 @@ export POSTGRES_PORT=5432
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
+python manage.py createsuperuser
+# Follow prompts: username, email, password
+http://127.0.0.1:8000/admin
 
 -- Connect to PostgreSQL as the default user
 psql -U postgres
