@@ -41,8 +41,23 @@ export POSTGRES_PORT=5432
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
-```
 
+-- Connect to PostgreSQL as the default user
+psql -U postgres
+
+-- Create database
+CREATE DATABASE book_manager;
+
+-- Create user
+CREATE USER book_user WITH PASSWORD 'book_pass';
+
+-- Grant privileges on schema
+GRANT ALL PRIVILEGES ON SCHEMA public TO book_user;
+ALTER SCHEMA public OWNER TO book_user;
+
+-- Allow the user to create databases if needed
+ALTER USER book_user CREATEDB;
+```
 ## API Endpoints
 
 Base path: `/api/`
